@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #ecf2f8;
+}
+.main-container {
+    max-width: 1500px;
+    height: 60vh;
+    margin: 200px auto;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    "daniel daniel jonathan kira"
+    "jeanette patrick patrick kira";
+    
+}
+.daniel {
+    background: #723fc8;
+    grid-area: daniel;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    z-index: -1;
+}
+.main-container .daniel #background {
+    height: 40%;
+    position: absolute;
+    top: 0;
+    right: 120px;
+    z-index: -1;
+}
+.jonathan {
+    background: #49556b;
+    border-radius: 10px;
+    grid-area: jonathan;
+    padding: 35px;
+}
+.kira {
+    background: white;
+    border-radius: 10px;
+    grid-area: kira;
+    padding: 35px;
+}
+.jeanette {
+background: white;
+border-radius: 10px;
+grid-area: jeanette;
+padding: 35px;
+}
+.patrick {
+    background: #18202e;
+    border-radius: 10px;
+    grid-area: patrick;
+    padding: 30px;
+}
+            /* container block */
+.main-container .with-border-img {
+    border-radius: 50px;
+    border: 3px solid #ad77c5;
+}
+.header-container {
+    display: flex;
+    align-items: center;
+}
+.main-container .border-img {
+   border-radius: 50px; 
+}
+.main-container .black-header-right {
+    color:black;
+    padding-left: 25px;
+}
+.main-container .white-header-right {
+    color: white;
+    padding-left: 25px;
+}
+.main-container .black-header-right h1,
+.main-container .white-header-right h1 {
+   font-size: 1.3rem; 
+}
+.main-container .white-header-right h2,
+.main-container .black-header-right h2 {
+    font-size: 1.1rem;
+    font-weight: 100;
+}
+.main-container .main-container-black h3,
+.main-container .main-container-white h3 {
+    font-size: 1.7rem;
+    margin: 35px 0 40px 0;
+}
+.main-container .main-container-black h3,
+.main-container .main-container-black p {
+    color: black;
+}
+.main-container .main-container-white h3,
+.main-container .main-container-white p {
+    color: white;
+}
+.main-container .main-container-white p,
+.main-container .main-container-black p {
+    font-size: 1.1rem;
+}
+@media screen and (max-width:1350px)  {
+    .main-container {
+        max-width: 1000px;
+        display: block;
+        margin: 25px auto;
+    }
+    .daniel,
+    .jonathan,
+    .jeanette,
+    .patrick,
+    .kira {
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width:1000px)  {
+    .main-container {
+        max-width: 800px;
+    }
+}
+@media screen and (max-width:800px)  {
+    .main-container {
+        max-width: 700px;
+    }
+    .main-container .daniel #background {
+        height: 25%;
+        top: 5px;
+        right: 5px;
+    }
+}
+@media screen and (max-width:550px)  {
+    .main-container {
+        max-width: 700px;
+    }
+    .main-container .daniel #background {
+        height: 20%;
+    }
+}
